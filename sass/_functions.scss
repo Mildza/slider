@@ -1,0 +1,46 @@
+$default-font-weight: 100;
+$default-font-size: 16;
+
+@function px2em($size-in-px, $base-size:$default-font-size) {
+  @return ($size-in-px/$base-size) + em;
+}
+@function px2rem($size-in-px) {
+  @return ($size-in-px/$default-font-size) + rem;
+}
+
+@mixin border-radius ($radius) {
+  -webkit-border-radius: $radius;
+   -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+        border-radius: $radius;
+}
+
+@mixin animate ( $attr, $time){
+  -webkit-transition: $attr $time ease;
+  -moz-transition: $attr $time ease;
+  -ms-transition: $attr $time ease;
+  -o-transition: $attr $time ease;
+  transition: $attr $time ease;
+}
+
+@mixin transition ( $time, $function, $position){
+  -webkit-transition: $time $function, $position;
+  -moz-transition: $time $function, $position;
+  -ms-transition: $time $function, $position;
+  -o-transition: $time $function, $position;
+  transition: $time $function, $position;
+}
+
+@mixin transform( $val ) {
+  -webkit-transform: $val;
+  -moz-transform: $val;
+  -ms-transform: $val;
+  -o-transform: $val;
+  transform: $val;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
