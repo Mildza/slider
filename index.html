@@ -8,10 +8,40 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
      <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <title>Majstori Majstori</title>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+        var pattern = prompt("Enter ellement", "for classes=.class  for id=#div or for tag=a");
+        if (pattern != null) {
+
+        var txt = "";
+        txt += "Width: " + $(pattern).width() + "\n";
+        txt += "Height: " + $(pattern).height() + "\n";
+        txt += "Padding(left+right): " + ($(pattern).innerWidth()-$(pattern).width()) + "\n";
+        txt += "Padding(up+down): " + ($(pattern).innerHeight()-$(pattern).height()) + "\n";
+        txt += "Border: " + ($(pattern).outerWidth()-$(pattern).innerWidth())/2 + "\n";
+        txt += "Margin(left+right): " + ($(pattern).outerWidth(true)-$(pattern).outerWidth()) + "\n";
+        txt += "Margin(up+down): " + ($(pattern).outerHeight(true)-$(pattern).outerHeight()) + "\n";
+        txt += "Windows size: " + $(document).width();
+        txt += "x" + $(document).height() + "\n";
+        txt += "Viewport size: " + $(window).width();
+        txt += "x" + $(window).height();
+
+       alert(txt);
+     }
+
+});
+
+</script>
+
   </head>
 
 <body>
+  
   <div class="container-fluid">
       <div class="row top-header">
 
