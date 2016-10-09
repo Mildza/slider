@@ -41,7 +41,7 @@ $(document).ready(function(){
   </head>
 
 <body>
-  
+
   <div class="container-fluid">
       <div class="row top-header">
 
@@ -145,32 +145,32 @@ $(document).ready(function(){
           <div class="carousel-inner" >
             <div class="item active">
                 <div class="col-xs-4 img-wrapper">
-                    <a href="#"><img src="images/1.png" alt="" /></a>
+                    1<!-- <a href="#"><img src="images/1.png" alt="" /></a> -->
                 </div>
             </div>
             <div class="item">
                 <div class="col-xs-4 img-wrapper">
-                    <a href="#"><img src="images/2.png" alt="" /></a>
+                    2<!-- <a href="#"><img src="images/2.png" alt="" /></a> -->
                 </div>
             </div>
             <div class="item">
                 <div class=" col-xs-4 img-wrapper">
-                    <a href="#"><img src="images/3.png" alt="" /></a>
+                    3<!-- <a href="#"><img src="images/3.png" alt="" /></a> -->
                 </div>
             </div>
             <div class="item">
                 <div class="col-xs-4 img-wrapper">
-                    <a href="#"><img src="images/4.png" alt="" /></a>
+                    4<!-- <a href="#"><img src="images/4.png" alt="" /></a> -->
                 </div>
             </div>
             <div class="item">
                 <div class="col-xs-4 img-wrapper">
-                    <a href="#"><img src="images/5.png" alt="" /></a>
+                    5<!-- <a href="#"><img src="images/5.png" alt="" /></a> -->
                 </div>
             </div>
             <div class="item">
                 <div class="col-xs-4 img-wrapper">
-                    <a href="#"><img src="images/6.png" alt="" /></a>
+                    6<!-- <a href="#"><img src="images/6.png" alt="" /></a> -->
                 </div>
             </div>
 
@@ -202,20 +202,42 @@ $(document).ready(function(){
     interval: 10000
     })
 
-    $('.carousel .item').each(function(){
+
+    $('#myCarousel2 .item').each(function(){
         var next = $(this).next();
         if (next.length==0) {
             next = $(this).siblings(':first');
         }
-        next.children(':first-child').clone().appendTo($(this));
+        
+          // next.children(':first-child').clone().appendTo($(this)); 
+          next.length>0 ? next.children(':first-child').clone().appendTo($(this)) : $(this).siblings(':first').children(':first-child').clone().appendTo($(this));  
+
+          next.next().length>0 ? next.next().children(':first-child').clone().appendTo($(this)) : $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+
+          next.next().next().length>0 ? next.next().next().children(':first-child').clone().appendTo($(this)) : next.siblings(':first').children(':first-child').clone().appendTo($(this));
+
+          next.next().next().next().length>0 ? next.next().next().next().children(':first-child').clone().appendTo($(this)) : $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+
+          
+    //  //   if (next.next().length>0) {
+
+    //     next.next().children(':first-child').clone().appendTo($(this));
+
+    //   }
+    //     if (next.next().next().length>0) {
+    //     next.next().next().children(':first-child').clone().appendTo($(this));
+    //   }
+    //   if (next.next().next().next().length>0) {
+    //   next.next().next().next().children(':first-child').clone().appendTo($(this));
+    // }
 
 
-        if (next.next().length>0) {
-        next.next().children(':first-child').clone().appendTo($(this));
-        }
-        else {
-        $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-        }
+        // else {
+        // $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+        // }
+
+
+
     });
     </script>
 
