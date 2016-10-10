@@ -86,6 +86,8 @@
 .carousel.vertical .active.right {top: 400px;}
 .carousel.vertical .item {left: 0;}
 
+
+
 #myCarousel2>.carousel-inner>.item>img {
 
 }
@@ -94,7 +96,8 @@
     height:115px;
     border:1px solid #E0DEDE;
 
-    padding-right: 15px;
+    padding-right: 10px;
+    margin-left: 15px;
 }
 // .carousel-inner .active.left  { left: -33%;             }
 // .carousel-inner .active.right { left: 33%;              }

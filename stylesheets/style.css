@@ -253,12 +253,13 @@ a:hover {
   left: 0;
 }
 
-/* line 92, ../sass/_carousel.scss */
+/* line 94, ../sass/_carousel.scss */
 .img-wrapper {
   width: 160px;
   height: 115px;
   border: 1px solid #E0DEDE;
-  padding-right: 15px;
+  padding-right: 10px;
+  margin-left: 15px;
 }
 
 /* line 8, ../sass/style.scss */

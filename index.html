@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <title>Majstori Majstori</title>
+
+<script type="text/javascript">
+$(document).ready(function(){
+        var pattern = prompt("Enter ellement", "for classes=.class  for id=#div or for tag=a");
+        if (pattern != null) {
+        var txt = "";
+        txt += "Width: " + $(pattern).width() + "\n";
+        txt += "Height: " + $(pattern).height() + "\n";
+        txt += "Padding(left+right): " + ($(pattern).innerWidth()-$(pattern).width()) + "\n";
+        txt += "Padding(up+down): " + ($(pattern).innerHeight()-$(pattern).height()) + "\n";
+        txt += "Border: " + ($(pattern).outerWidth()-$(pattern).innerWidth())/2 + "\n";
+        txt += "Margin(left+right): " + ($(pattern).outerWidth(true)-$(pattern).outerWidth()) + "\n";
+        txt += "Margin(up+down): " + ($(pattern).outerHeight(true)-$(pattern).outerHeight()) + "\n";
+        txt += "Windows size: " + $(document).width();
+        txt += "x" + $(document).height() + "\n";
+        txt += "Viewport size: " + $(window).width();
+        txt += "x" + $(window).height();
+       alert(txt);
+     }
+});
+</script>
+
+  </head>
+
+<body>
+
+  <div class="container-fluid">
+      <div class="row top-header">
+
+        <div class="col-xs-12 col-md-6 pull-left">
+          Bel ons op! 071-710 740 5 of 06-24 36 83 90|info@meesterstucadoors.nl
+        </div>
+        <div class="col-xs-12 col-md-6 pull-right">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          <i class="fa fa-google-plus" aria-hidden="true"></i>
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="mid-header text-center">
+    <img src="images/header.png" alt="" />
+    </div>
+
+  <div class="container">
+  <nav class="navbar center">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="goto text-left visible-xs" data-toggle="collapse" data-target="#myNavbar">Go to ...</a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a class="red" href="#">Home</a></li>
+        <li><a href="#">Binnenstucwerk</a></li>
+        <li><a href="#">Gevelstucwerk</a></li>
+        <li><a href="#">Sierpleister en afwerking</a></li>
+        <li><a href="#">Schilderwerk</a></li>
+        <li><a href="#"> Nieuwbouw</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Offerteaanvraag</a></li>
+          <li class="divider"></li>
+          <li><a href="#">FAQ</a></li>
+          <li class="divider"></li>
+          <li><a href="#">6% BTW Tarief</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Onze werkwijze</a></li>
+
+        </ul>
+      </li>
+      </ul>
+    </div>
+  </div> <!-- container-fluid -->
+  </nav>
+</div>
+
+<div class="container-fluid slider">
+    <div id="myCarousel" class="carousel slide vertical" data-ride="carousel" data-pause="hover" data-interval="7500">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active slider1">
+        </div>
+        <div class="item slider2">
+        </div>
+        <div class="item slider3">
+        </div>
+      </div>
+      <!-- Left and right controls -->
+      <div class="carousel-controls">
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    </div>
+    </div>
+    <br>
+    <br>
+
+    <!--*************Static Carousel **********-->
+    <div class="container">
+        <div id="myCarousel2" class="carousel slide" >
+
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" >
+            <div class="item active dinamic ">
+                <div class="col-xs-4 img-wrapper">
+                    1<!-- <a href="#"><img src="images/1.png" alt="" /></a> -->
+                </div>
+            </div>
+            <div class="item dinamic">
+                <div class="col-xs-4 img-wrapper">
+                    2<!-- <a href="#"><img src="images/2.png" alt="" /></a> -->
+                </div>
+            </div>
+            <div class="item dinamic">
+                <div class=" col-xs-4 img-wrapper">
+                    3<!-- <a href="#"><img src="images/3.png" alt="" /></a> -->
+                </div>
+            </div>
+            <div class="item dinamic">
+                <div class="col-xs-4 img-wrapper">
+                    4<!-- <a href="#"><img src="images/4.png" alt="" /></a> -->
+                </div>
+            </div>
+            <div class="item dinamic">
+                <div class="col-xs-4 img-wrapper">
+                    5<!-- <a href="#"><img src="images/5.png" alt="" /></a> -->
+                </div>
+            </div>
+            <div class="item dinamic">
+                <div class="col-xs-4 img-wrapper">
+                    6<!-- <a href="#"><img src="images/6.png" alt="" /></a> -->
+                </div>
+            </div>
+
+        </div>
+
+
+          <!-- Left and right controls -->
+          <div class="carousel-controls">
+          <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        </div>
+</div>
+
+
+<div class="proba"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+    $('#myCarousel2').carousel({
+    interval: 10000
+    })
+
+    $(function() {
+        dzslider();
+    })
+
+    function dzslider() {
+        x = $('.dinamic').length;
+
+        y = 1;
+        var template = "";
+
+        $('.dinamic').each(function () {
+
+        for (var i = y; i < x; i++) {
+
+        template += '<div class="col-xs-4 img-wrapper">' +
+                        '<a href="#"><img src="images/'+ i + '.png" alt="" /></a>' +
+                        '</div>';
+        $(this).html(template);
+
+        };
+        template = "";
+        if (y=7) {
+            y=1;
+            i=1;
+            x=6;
+        };
+        y=y+1;
+        x=x+1;
+
+
+    });
+    //console.log(template);
+
+};
+
+
+
+    // $('#myCarousel2 .item').each(function(){
+    //     var next = $(this).next();
+    //     if (next.length==0) {
+    //         next = $(this).siblings(':first');
+    //     }
+    //
+    //       // next.children(':first-child').clone().appendTo($(this));
+    //       next.length>0 ? next.children(':first-child').clone().appendTo($(this)) : $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+    //       next.next().length>0 ? next.next().children(':first-child').clone().appendTo($(this)) : $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+    //       next.next().next().length>0 ? next.next().next().children(':first-child').clone().appendTo($(this)) : next.siblings(':first').children(':first-child').clone().appendTo($(this));
+    //       next.next().next().next().length>0 ? next.next().next().next().children(':first-child').clone().appendTo($(this)) : $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+    //
+
+
+
+
+    //  //   if (next.next().length>0) {
+    //     next.next().children(':first-child').clone().appendTo($(this));
+    //   }
+    //     if (next.next().next().length>0) {
+    //     next.next().next().children(':first-child').clone().appendTo($(this));
+    //   }
+    //   if (next.next().next().next().length>0) {
+    //   next.next().next().next().children(':first-child').clone().appendTo($(this));
+    // }
+        // else {
+        // $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+        // }
+    //});
+    </script>
+
+</body>
+</html>
