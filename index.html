@@ -10,28 +10,6 @@
      <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <title>Majstori Majstori</title>
-
-<script type="text/javascript">
-$(document).ready(function(){
-        var pattern = prompt("Enter ellement", "for classes=.class  for id=#div or for tag=a");
-        if (pattern != null) {
-        var txt = "";
-        txt += "Width: " + $(pattern).width() + "\n";
-        txt += "Height: " + $(pattern).height() + "\n";
-        txt += "Padding(left+right): " + ($(pattern).innerWidth()-$(pattern).width()) + "\n";
-        txt += "Padding(up+down): " + ($(pattern).innerHeight()-$(pattern).height()) + "\n";
-        txt += "Border: " + ($(pattern).outerWidth()-$(pattern).innerWidth())/2 + "\n";
-        txt += "Margin(left+right): " + ($(pattern).outerWidth(true)-$(pattern).outerWidth()) + "\n";
-        txt += "Margin(up+down): " + ($(pattern).outerHeight(true)-$(pattern).outerHeight()) + "\n";
-        txt += "Windows size: " + $(document).width();
-        txt += "x" + $(document).height() + "\n";
-        txt += "Viewport size: " + $(window).width();
-        txt += "x" + $(window).height();
-       alert(txt);
-     }
-});
-</script>
-
   </head>
 
 <body>
@@ -129,48 +107,26 @@ $(document).ready(function(){
     </div>
     <br>
     <br>
-
     <!--*************Static Carousel **********-->
     <div class="container">
-        <div id="myCarousel2" class="carousel slide" >
-
-
+        <div id="myCarousel2" class="carousel slide vertical2" >
           <!-- Wrapper for slides -->
+          <div class="row">
           <div class="carousel-inner" >
-            <div class="item active dinamic ">
-                <div class="col-xs-4 img-wrapper">
-                    1<!-- <a href="#"><img src="images/1.png" alt="" /></a> -->
-                </div>
+            <div class="item active dinamic">
             </div>
             <div class="item dinamic">
-                <div class="col-xs-4 img-wrapper">
-                    2<!-- <a href="#"><img src="images/2.png" alt="" /></a> -->
-                </div>
             </div>
             <div class="item dinamic">
-                <div class=" col-xs-4 img-wrapper">
-                    3<!-- <a href="#"><img src="images/3.png" alt="" /></a> -->
-                </div>
             </div>
             <div class="item dinamic">
-                <div class="col-xs-4 img-wrapper">
-                    4<!-- <a href="#"><img src="images/4.png" alt="" /></a> -->
-                </div>
             </div>
             <div class="item dinamic">
-                <div class="col-xs-4 img-wrapper">
-                    5<!-- <a href="#"><img src="images/5.png" alt="" /></a> -->
-                </div>
             </div>
             <div class="item dinamic">
-                <div class="col-xs-4 img-wrapper">
-                    6<!-- <a href="#"><img src="images/6.png" alt="" /></a> -->
-                </div>
             </div>
-
         </div>
-
-
+        </div>
           <!-- Left and right controls -->
           <div class="carousel-controls">
           <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
@@ -185,83 +141,36 @@ $(document).ready(function(){
         </div>
 </div>
 
-
-<div class="proba"></div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
     $('#myCarousel2').carousel({
-    interval: 10000
+    interval: 35000
     })
 
     $(function() {
-        dzslider();
+        dzlider();
     })
 
-    function dzslider() {
-        x = $('.dinamic').length;
-
-        y = 1;
+    function dzlider() {
         var template = "";
+        var slides = ["1", "2", "3", "4", "5", "6"];
 
         $('.dinamic').each(function () {
-
-        for (var i = y; i < x; i++) {
-
-        template += '<div class="col-xs-4 img-wrapper">' +
-                        '<a href="#"><img src="images/'+ i + '.png" alt="" /></a>' +
+        for (var i = 0; i < 5; i++) {
+        template += '<div class="col-xs-6 img-wrapper center-block">' +
+                        '<a href="#"><img src="images/'+ slides[i] + '.png" alt="" /></a>' +
                         '</div>';
         $(this).html(template);
-
         };
+        var shifted = slides.shift();
+        slides.push(shifted);
         template = "";
-        if (y=7) {
-            y=1;
-            i=1;
-            x=6;
-        };
-        y=y+1;
-        x=x+1;
-
-
     });
-    //console.log(template);
-
 };
 
 
-
-    // $('#myCarousel2 .item').each(function(){
-    //     var next = $(this).next();
-    //     if (next.length==0) {
-    //         next = $(this).siblings(':first');
-    //     }
-    //
-    //       // next.children(':first-child').clone().appendTo($(this));
-    //       next.length>0 ? next.children(':first-child').clone().appendTo($(this)) : $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-    //       next.next().length>0 ? next.next().children(':first-child').clone().appendTo($(this)) : $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-    //       next.next().next().length>0 ? next.next().next().children(':first-child').clone().appendTo($(this)) : next.siblings(':first').children(':first-child').clone().appendTo($(this));
-    //       next.next().next().next().length>0 ? next.next().next().next().children(':first-child').clone().appendTo($(this)) : $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-    //
-
-
-
-
-    //  //   if (next.next().length>0) {
-    //     next.next().children(':first-child').clone().appendTo($(this));
-    //   }
-    //     if (next.next().next().length>0) {
-    //     next.next().next().children(':first-child').clone().appendTo($(this));
-    //   }
-    //   if (next.next().next().next().length>0) {
-    //   next.next().next().next().children(':first-child').clone().appendTo($(this));
-    // }
-        // else {
-        // $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-        // }
-    //});
     </script>
 
 </body>

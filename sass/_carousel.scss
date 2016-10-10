@@ -78,32 +78,17 @@
 .carousel.vertical .prev {top: -400px;}
 
 .carousel.vertical .next.left,
-.carousel.vertical .prev.right {
-   top: 0;
-}
-
+.carousel.vertical .prev.right { top: 0;}
 .carousel.vertical .active.left {top: -400px;}
 .carousel.vertical .active.right {top: 400px;}
 .carousel.vertical .item {left: 0;}
 
 
-
-#myCarousel2>.carousel-inner>.item>img {
-
-}
-.img-wrapper {
-    width:160px;
+.dinamic {padding-left: 40px;}
+.img-wrapper{
+    width:170px;
     height:115px;
     border:1px solid #E0DEDE;
-
-    padding-right: 10px;
-    margin-left: 15px;
+    margin-left: 3%;
 }
-// .carousel-inner .active.left  { left: -33%;             }
-// .carousel-inner .active.right { left: 33%;              }
-// .carousel-inner .next         { left: 33%               }
-// .carousel-inner .prev         { left: -33%              }
-// .carousel-inner .item         { background: white;      }
-
-
-//http://jsfiddle.net/paulalexandru/at606jpe/
+.carousel.vertical2 .left, .carousel.vertical2 .right  {top: 30px;}

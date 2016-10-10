@@ -238,28 +238,37 @@ a:hover {
   top: 0;
 }
 
-/* line 85, ../sass/_carousel.scss */
+/* line 82, ../sass/_carousel.scss */
 .carousel.vertical .active.left {
   top: -400px;
 }
 
-/* line 86, ../sass/_carousel.scss */
+/* line 83, ../sass/_carousel.scss */
 .carousel.vertical .active.right {
   top: 400px;
 }
 
-/* line 87, ../sass/_carousel.scss */
+/* line 84, ../sass/_carousel.scss */
 .carousel.vertical .item {
   left: 0;
 }
 
-/* line 94, ../sass/_carousel.scss */
+/* line 87, ../sass/_carousel.scss */
+.dinamic {
+  padding-left: 40px;
+}
+
+/* line 88, ../sass/_carousel.scss */
 .img-wrapper {
-  width: 160px;
+  width: 170px;
   height: 115px;
   border: 1px solid #E0DEDE;
-  padding-right: 10px;
-  margin-left: 15px;
+  margin-left: 3%;
+}
+
+/* line 94, ../sass/_carousel.scss */
+.carousel.vertical2 .left, .carousel.vertical2 .right {
+  top: 30px;
 }
 
 /* line 8, ../sass/style.scss */
