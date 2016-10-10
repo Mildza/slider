@@ -11,7 +11,7 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <title>Majstori Majstori</title>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 
 $(document).ready(function(){
 
@@ -34,14 +34,14 @@ $(document).ready(function(){
        alert(txt);
      }
 
-});
+}); -->
 
 </script>
 
   </head>
 
 <body>
-  
+
   <div class="container-fluid">
       <div class="row top-header">
 
@@ -143,33 +143,33 @@ $(document).ready(function(){
 
           <!-- Wrapper for slides -->
           <div class="carousel-inner" >
-            <div class="item active">
-                <div class="col-xs-4 img-wrapper">
+            <div class="item active dinamic">
+                <div class="col-xs-2 img-wrapper">
                     <a href="#"><img src="images/1.png" alt="" /></a>
                 </div>
             </div>
-            <div class="item">
-                <div class="col-xs-4 img-wrapper">
+            <div class="item dinamic">
+                <div class="col-xs-2 img-wrapper">
                     <a href="#"><img src="images/2.png" alt="" /></a>
                 </div>
             </div>
-            <div class="item">
-                <div class=" col-xs-4 img-wrapper">
+            <div class="item dinamic">
+                <div class="col-xs-2 img-wrapper">
                     <a href="#"><img src="images/3.png" alt="" /></a>
                 </div>
             </div>
-            <div class="item">
-                <div class="col-xs-4 img-wrapper">
+            <div class="item dinamic">
+                <div class="col-xs-2 img-wrapper">
                     <a href="#"><img src="images/4.png" alt="" /></a>
                 </div>
             </div>
-            <div class="item">
-                <div class="col-xs-4 img-wrapper">
+            <div class="item dinamic">
+                <div class="col-xs-2 img-wrapper">
                     <a href="#"><img src="images/5.png" alt="" /></a>
                 </div>
             </div>
-            <div class="item">
-                <div class="col-xs-4 img-wrapper">
+            <div class="item dinamic">
+                <div class="col-xs-2 img-wrapper">
                     <a href="#"><img src="images/6.png" alt="" /></a>
                 </div>
             </div>
@@ -202,21 +202,44 @@ $(document).ready(function(){
     interval: 10000
     })
 
-    $('.carousel .item').each(function(){
+
+
+
+
+
+    $('#myCarousel2 .item').each(function(){
+
+        var x=$(".dinamic").length;
         var next = $(this).next();
-        if (next.length==0) {
-            next = $(this).siblings(':first');
-        }
-        next.children(':first-child').clone().appendTo($(this));
+        for (i=0; i < x; i++) {
+        $('.dinamic:eq(i)').clone().appendTo($(this));
+        
+    };
 
 
-        if (next.next().length>0) {
-        next.next().children(':first-child').clone().appendTo($(this));
-        }
-        else {
-        $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-        }
     });
+
+
+
+    // $('#myCarousel2 .item').each(function(){
+    //
+    //     var next = $(this).next();
+    //
+    //     if (next.length==0) {
+    //         next = $(this).siblings(':first');
+    //     }
+    //
+    //     next.children(':first-child').clone().appendTo($(this));
+    //
+    //     if (next.next().length>0) {
+    //     next.next().children(':first-child').clone().appendTo($(this));
+    //     }
+    //
+    //     else {
+    //     $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+    //     }
+    //
+    // });
     </script>
 
 </body>

@@ -1,3 +1,4 @@
+/* line 1, ../sass/_reset.scss */
 html, body {
   margin: 0;
   padding: 0;
@@ -15,40 +16,49 @@ html, body {
   font-style: normal;
 }
 /**Center navbar items**/
+/* line 2, ../sass/_navbar.scss */
 .navbar-nav {
   width: 100%;
   text-align: center;
 }
+/* line 5, ../sass/_navbar.scss */
 .navbar-nav > li {
   float: none;
   display: inline-block;
 }
 
 /*---------------------*/
+/* line 12, ../sass/_navbar.scss */
 .navbar-nav > li > a {
   font-size: 0.875em;
 }
 
+/* line 14, ../sass/_navbar.scss */
 .navbar-nav > li > a:hover, .navbar-nav > li > a:link .navbar-nav > li > a:active {
   background-color: #fff;
 }
 
+/* line 15, ../sass/_navbar.scss */
 .dropdown > li > a:hover, .dropdown > li > a:link, .dropdown > li > a:link {
   background-color: #fff;
 }
 
+/* line 16, ../sass/_navbar.scss */
 .dropdown-menu > li > a {
   padding: 1px 15px;
 }
 
+/* line 17, ../sass/_navbar.scss */
 .dropdown-menu > li > a:hover {
   background-color: white;
 }
 
+/* line 18, ../sass/_navbar.scss */
 a:hover {
   color: #E10707;
 }
 
+/* line 19, ../sass/_navbar.scss */
 .goto {
   width: 70%;
   font-size: 0.75em;
@@ -60,32 +70,39 @@ a:hover {
   padding-left: 10px;
 }
 
+/* line 29, ../sass/_navbar.scss */
 .navbar-header > a:hover, .navbar-header > a:link, .navbar-header > a:active {
   color: #747474;
   text-decoration: none;
 }
 
+/* line 30, ../sass/_navbar.scss */
 .navbar-header {
   border: 1px solid #747474;
 }
 
+/* line 31, ../sass/_navbar.scss */
 .navbar-toggle {
   border: 1px solid #747474;
 }
 
 @media (max-width: 768px) {
+  /* line 34, ../sass/_navbar.scss */
   .navbar-nav > li:first-child {
     border-top: 1px solid grey;
   }
 
+  /* line 37, ../sass/_navbar.scss */
   .navbar-collapse, .collapse {
     margin-top: -10px;
   }
 
+  /* line 39, ../sass/_navbar.scss */
   .navbar-nav > ul {
     width: 130%;
   }
 
+  /* line 40, ../sass/_navbar.scss */
   .navbar-nav > li {
     display: block;
     text-align: left;
@@ -94,30 +111,36 @@ a:hover {
     border-color: grey;
     padding-right: 0%;
   }
+  /* line 47, ../sass/_navbar.scss */
   .navbar-nav > li a {
     color: #747474;
     font-size: 0.75em;
   }
 }
+/* line 1, ../sass/_carousel.scss */
 .slider {
   padding: 0;
 }
 
+/* line 3, ../sass/_carousel.scss */
 #myCarousel {
   width: 100%;
   height: 300px;
 }
 @media (min-width: 992px) {
+  /* line 3, ../sass/_carousel.scss */
   #myCarousel {
     height: 400px;
   }
 }
 @media (min-width: 1200px) {
+  /* line 3, ../sass/_carousel.scss */
   #myCarousel {
     height: 450px;
   }
 }
 
+/* line 11, ../sass/_carousel.scss */
 .slider1 {
   width: 100%;
   height: 100%;
@@ -136,6 +159,7 @@ a:hover {
     background-position: center top;
   }
 }
+/* line 27, ../sass/_carousel.scss */
 #myCarousel:hover .slider1, #myCarousel:hover .slider2 {
   -webkit-animation-play-state: paused;
   -moz-animation-play-state: paused;
@@ -143,6 +167,7 @@ a:hover {
   animation-play-state: paused;
 }
 
+/* line 35, ../sass/_carousel.scss */
 .slider2 {
   width: 100%;
   height: 100%;
@@ -161,6 +186,7 @@ a:hover {
     background-position: center bottom;
   }
 }
+/* line 51, ../sass/_carousel.scss */
 .slider3 {
   width: 100%;
   height: 100%;
@@ -169,6 +195,7 @@ a:hover {
   background-repeat: no-repeat;
 }
 
+/* line 60, ../sass/_carousel.scss */
 .carousel-control {
   width: 4%;
   height: 60px;
@@ -176,10 +203,12 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+/* line 68, ../sass/_carousel.scss */
 .vertical .carousel-inner {
   height: 100%;
 }
 
+/* line 73, ../sass/_carousel.scss */
 .carousel.vertical .item {
   -webkit-transition: 0.6s easy-in-out, top;
   -moz-transition: 0.6s easy-in-out, top;
@@ -188,35 +217,43 @@ a:hover {
   transition: 0.6s easy-in-out, top;
 }
 
+/* line 76, ../sass/_carousel.scss */
 .carousel.vertical .active {
   top: 0;
 }
 
+/* line 77, ../sass/_carousel.scss */
 .carousel.vertical .next {
   top: 400px;
 }
 
+/* line 78, ../sass/_carousel.scss */
 .carousel.vertical .prev {
   top: -400px;
 }
 
+/* line 80, ../sass/_carousel.scss */
 .carousel.vertical .next.left,
 .carousel.vertical .prev.right {
   top: 0;
 }
 
+/* line 85, ../sass/_carousel.scss */
 .carousel.vertical .active.left {
   top: -400px;
 }
 
+/* line 86, ../sass/_carousel.scss */
 .carousel.vertical .active.right {
   top: 400px;
 }
 
+/* line 87, ../sass/_carousel.scss */
 .carousel.vertical .item {
   left: 0;
 }
 
+/* line 92, ../sass/_carousel.scss */
 .img-wrapper {
   width: 160px;
   height: 115px;
@@ -224,6 +261,7 @@ a:hover {
   padding-right: 15px;
 }
 
+/* line 8, ../sass/style.scss */
 .top-header {
   min-height: 40px;
   background-color: #E10707;
@@ -232,19 +270,23 @@ a:hover {
   padding-top: 10px;
   text-align: center;
 }
+/* line 15, ../sass/style.scss */
 .top-header i {
   font-size: 1.5em;
   padding: 5px 10px;
 }
 
+/* line 20, ../sass/style.scss */
 .mid-header {
   padding: 30px 0px;
 }
 
+/* line 22, ../sass/style.scss */
 .icon-bar {
   background-color: #000;
 }
 
+/* line 23, ../sass/style.scss */
 .red {
   color: #E10707;
 }
