@@ -109,10 +109,14 @@
     <br>
     <!--*************Static Carousel **********-->
     <div class="container">
+        <div class="row">
+
+
         <div id="myCarousel2" class="carousel slide vertical2" >
           <!-- Wrapper for slides -->
-          <div class="row">
+
           <div class="carousel-inner" >
+
             <div class="item active dinamic">
             </div>
             <div class="item dinamic">
@@ -126,7 +130,7 @@
             <div class="item dinamic">
             </div>
         </div>
-        </div>
+
           <!-- Left and right controls -->
           <div class="carousel-controls">
           <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
@@ -139,6 +143,8 @@
           </a>
         </div>
         </div>
+    </div>
+
 </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -148,7 +154,27 @@
     $('#myCarousel2').carousel({
     interval: 35000
     })
-
+    var w = 0;
+    var x=5;
+    $( window ).load( function(){
+    w = $( window ).width();
+    });
+    $(window).on("resize", function(event){
+      if( $(this).width() < 800 ) {
+        x=3;
+        console.log($(this).width());
+      }
+});
+//     $( window ).resize( function(){
+//         console.log(w);
+//     if( w < 890 ){
+//     x=3;
+//     w = $( window ).width();
+//     delete w;
+//
+//   }
+//
+// });
     $(function() {
         dzlider();
     })
@@ -158,8 +184,8 @@
         var slides = ["1", "2", "3", "4", "5", "6"];
 
         $('.dinamic').each(function () {
-        for (var i = 0; i < 5; i++) {
-        template += '<div class="col-xs-6 img-wrapper center-block">' +
+        for (var i = 0; i < x; i++) {
+        template +=     '<div class="col-xs-3 col-md-2 img-wrapper center-block">' +
                         '<a href="#"><img src="images/'+ slides[i] + '.png" alt="" /></a>' +
                         '</div>';
         $(this).html(template);

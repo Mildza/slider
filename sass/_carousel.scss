@@ -86,9 +86,11 @@
 
 .dinamic {padding-left: 40px;}
 .img-wrapper{
-    width:170px;
-    height:115px;
+    // width:170px;
+    // height:115px;
     border:1px solid #E0DEDE;
-    margin-left: 3%;
+    margin-left: 2%;
 }
-.carousel.vertical2 .left, .carousel.vertical2 .right  {top: 30px;}
+#myCarousel2 a.carousel-control {width:40px;height:45px;}
+#myCarousel2 .glyphicon-chevron-left,
+#myCarousel2 .glyphicon-chevron-right {font-size: 20px;}

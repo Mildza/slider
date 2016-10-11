@@ -260,15 +260,20 @@ a:hover {
 
 /* line 88, ../sass/_carousel.scss */
 .img-wrapper {
-  width: 170px;
-  height: 115px;
   border: 1px solid #E0DEDE;
-  margin-left: 3%;
+  margin-left: 2%;
 }
 
 /* line 94, ../sass/_carousel.scss */
-.carousel.vertical2 .left, .carousel.vertical2 .right {
-  top: 30px;
+#myCarousel2 a.carousel-control {
+  width: 40px;
+  height: 45px;
+}
+
+/* line 95, ../sass/_carousel.scss */
+#myCarousel2 .glyphicon-chevron-left,
+#myCarousel2 .glyphicon-chevron-right {
+  font-size: 20px;
 }
 
 /* line 8, ../sass/style.scss */
