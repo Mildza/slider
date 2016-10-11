@@ -108,15 +108,9 @@
     <br>
     <br>
     <!--*************Static Carousel **********-->
-    <div class="container">
-        <div class="row">
-
-
-        <div id="myCarousel2" class="carousel slide vertical2" >
-          <!-- Wrapper for slides -->
-
+    <div class="container slider-dyn">    
+        <div id="myCarousel2" class="carousel slide" >
           <div class="carousel-inner" >
-
             <div class="item active dinamic">
             </div>
             <div class="item dinamic">
@@ -130,7 +124,6 @@
             <div class="item dinamic">
             </div>
         </div>
-
           <!-- Left and right controls -->
           <div class="carousel-controls">
           <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
@@ -143,38 +136,47 @@
           </a>
         </div>
         </div>
-    </div>
-
+    <br>
+    <br>
+    <br>
 </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
+
     $('#myCarousel2').carousel({
     interval: 35000
     })
     var w = 0;
-    var x=5;
+    var x = 5;
+    var y = 5;
     $( window ).load( function(){
     w = $( window ).width();
+    dzmedia();
     });
-    $(window).on("resize", function(event){
-      if( $(this).width() < 800 ) {
-        x=3;
-        console.log($(this).width());
+
+    function dzmedia() {
+      if( $(this).width() < 480 ) {
+        x=1; y=1;
       }
-});
-//     $( window ).resize( function(){
-//         console.log(w);
-//     if( w < 890 ){
-//     x=3;
-//     w = $( window ).width();
-//     delete w;
-//
-//   }
-//
-// });
+      else if( $(this).width() > 480 && $(this).width() < 620) {
+        x=2; y=2;
+      }
+      else if( $(this).width() > 620 && $(this).width() < 1009) {
+        x=3; y=3;
+      }
+      else if( $(this).width() > 1009 && $(this).width() < 1217) {
+        x=4; y=4;
+      }
+      else {x=5; y=5;}
+      dzlider();
+    }
+
+    $(window).on("resize", function(event){
+    dzmedia();
+    });
+
     $(function() {
         dzlider();
     })
@@ -185,18 +187,18 @@
 
         $('.dinamic').each(function () {
         for (var i = 0; i < x; i++) {
-        template +=     '<div class="col-xs-3 col-md-2 img-wrapper center-block">' +
+        template +=     '<div class="img-wrapper">' +
                         '<a href="#"><img src="images/'+ slides[i] + '.png" alt="" /></a>' +
                         '</div>';
         $(this).html(template);
         };
+        for (var i = 0; i < y; i++) {
         var shifted = slides.shift();
         slides.push(shifted);
+        }
         template = "";
-    });
-};
-
-
+      });
+    };
     </script>
 
 </body>

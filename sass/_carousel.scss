@@ -84,13 +84,17 @@
 .carousel.vertical .item {left: 0;}
 
 
-.dinamic {padding-left: 40px;}
+
+.slider-dyn {max-width: px2em(1000)};
+.dinamic {text-align: center;}
 .img-wrapper{
-    // width:170px;
-    // height:115px;
+  display:inline-block;
+  text-align: center;
+    width:170px;
+    height:115px;
     border:1px solid #E0DEDE;
-    margin-left: 2%;
+
 }
 #myCarousel2 a.carousel-control {width:40px;height:45px;}
 #myCarousel2 .glyphicon-chevron-left,
-#myCarousel2 .glyphicon-chevron-right {font-size: 20px;}
+#myCarousel2 .glyphicon-chevron-right {font-size: 18px;}
