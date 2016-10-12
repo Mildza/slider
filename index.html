@@ -108,8 +108,8 @@
     <br>
     <br>
     <!--*************Static Carousel **********-->
-    <div class="container slider-dyn">    
-        <div id="myCarousel2" class="carousel slide" >
+    <div class="container slider-dyn">
+        <div id="myCarousel2" class="carousel slide" data-pause="hover">
           <div class="carousel-inner" >
             <div class="item active dinamic">
             </div>
@@ -146,8 +146,9 @@
     <script type="text/javascript">
 
     $('#myCarousel2').carousel({
-    interval: 35000
+    interval: 7000
     })
+
     var w = 0;
     var x = 5;
     var y = 5;
